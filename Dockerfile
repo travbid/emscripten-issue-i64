@@ -10,7 +10,8 @@ RUN emcc \
   -sUSE_ES6_IMPORT_META=1 \
   -sALLOW_TABLE_GROWTH=1 \
   -sEXPORTED_RUNTIME_METHODS="[addFunction]" \
+  -sASSERTIONS=1 \
   -o foo.js \
   foo.cpp
 
-RUN node index.js
+CMD ["node", "index.js"]
